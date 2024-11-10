@@ -322,10 +322,16 @@ span.joke-punchlie:focus {
     justify-content: center;
   };
 
+  div.weather-container > div {
+    width: 90%;
+    justify-self: center;
+  }
+
   .weather-container {
     align-self: start;
   }
   .dummy-container {
+    width: 85%;
     margin-top: 50px;
     align-self: start;
   }
