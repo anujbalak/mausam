@@ -1,0 +1,329 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  font-family: "Rajdhani", sans-serif;
+  color: #eee;
+}
+
+div.app-body {
+  /* background-image: url('./assets/bg.jpg'); */
+  background: linear-gradient(rgb(237, 189, 106), rgb(53, 22, 22));
+  height: 100vh;
+  width: 100%;
+}
+
+div.app-body {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+}
+
+.search-body-container {
+  display: grid;
+  gap: 10px;
+  grid-template-rows: 60px 1fr;
+}
+
+.search-container {
+  grid-row: 2 / 3;
+  width: 100%;
+  display: grid;
+  gap: 10px;
+  place-self: center;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: max(300px, 60%);
+  gap: 7px;
+  justify-self: center;
+}
+
+label[for="search"] {
+  display: grid;
+  gap: 7px;
+}
+
+label[for="search"] p {
+  color: #eee;
+  font-size: 1.3rem;
+}
+
+input#search {
+  background-color: transparent;
+  font-family: Rajdhani;
+  color: #eee;
+  padding: 7px;
+  font-size: 1.3rem;
+  border: #eee 2px solid;
+  border-radius: 5px;
+}
+
+button.search-btn,
+button.nav-btn {
+  cursor: pointer;
+  background-color: #eee;
+  padding: 5px;
+  border: 2px solid #eee;
+  font-size: 1.3rem;
+  border-radius: 8px;
+  color: #191a34;
+  font-family: Rajdhani, sans-serif;
+}
+
+button.search-btn:focus,
+button.search-btn:hover {
+  background-color: transparent;
+  color: #eee;
+}
+
+.search-error {
+  color: #f88d75;
+}
+
+.nav-body-container {
+  top: 60px;
+  height: 100%;
+  right: 0;
+  background: linear-gradient(#946d41, #362724 5%);
+  position: fixed;
+  display: none;
+  border-radius: 10px 0 0 0;
+  width: 150px;
+  transition: margin 1s ease-out ;
+}
+hr {
+  color: #edbd70;
+}
+button.nav-btn {
+  align-self: center;
+  justify-self: end;
+  margin-right: 20px;
+  width: 30px;
+  height: 35px;
+  border-radius: 5px;
+}
+
+nav.nav-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 125px;
+  margin: 10px;
+  gap: 20px;
+}
+
+nav a {
+  color: #eee;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #f1d29f;
+  text-decoration: underline;
+  text-decoration-color: #edbd70;
+  text-decoration-skip: spaces objects;
+  text-decoration-style: dotted;
+  text-decoration-thickness: 2px;
+  -moz-text-decoration-style: dotted;
+  -moz-text-decoration-color: #edbd70;
+}
+
+.weather-body-container {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.weather-container {
+  align-self: end;
+  justify-self: center;
+  display: grid;
+  grid-template-rows: 100px 120px 1fr;
+}
+
+div.weather-container > div {
+  display: flex;
+  gap: 30px;
+}
+
+.city-name-container,
+.temprature-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #493936;
+}
+
+.temprature {
+  font-size: 3rem;
+}
+
+div.weather-container div + div {
+  gap: 15px;
+}
+
+div.weather-container div + div > div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+}
+
+.dummy-container {
+  display: flex;
+  align-items: center;
+  place-self: center;
+  justify-content: center;
+  width: max(400px, 60%);
+}
+
+.quote-container {
+  display: grid;
+  gap: 10px;
+}
+
+.quote-output {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+.quote-author {
+  place-self: end;
+  font-size: 1.3rem;
+  margin-right: 10px;
+}
+
+.joke-container {
+  display: none;
+  font-size: 1.2rem;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.joke-container span.joke-punchline {
+  width: max-content;
+  background: black;
+  padding: 4px 6px;
+  font-weight: 500;
+  color: black;
+}
+
+span.joke-punchline:hover,
+span.joke-punchlie:focus {
+  color: #eee;
+}
+/*--------------- checbox -------------------*/
+/* The switch - the box around the slider */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(53, 22, 22);
+  transition: 0.4s;
+  border-radius: 10px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  color: #191a34;
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 8px;
+  left: 0.3em;
+  bottom: 0.3em;
+  transform: rotate(270deg);
+  background-color: rgb(255, 255, 255);
+  transition: 0.4s;
+}
+
+.switch input:checked + .slider {
+  background-color: rgb(237, 189, 106);
+}
+
+.switch input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(1.5em);
+}
+
+.change-unit-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-family: Rajdhani, sans-serif;
+}
+
+@media only screen and (max-width: 800px) {
+  div.app-body {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+  }
+
+  .search-body-container {
+    grid-row: 1 / 2;
+  }
+
+  .weather-body-container {
+    grid-row: 2 / 3;
+  }
+  .second-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .search-container {
+    margin-bottom: 15px;
+  }
+
+  div.weather-container div {
+    justify-content: center;
+  };
+
+  .weather-container {
+    align-self: start;
+  }
+  .dummy-container {
+    margin-top: 50px;
+    align-self: start;
+  }
+}
