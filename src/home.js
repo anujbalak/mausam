@@ -227,6 +227,8 @@ function home() {
     }
   }
 
+
+
   function setWeatherData(data) {
     cityName.innerText = data.resolvedAddress;
     temprature.innerText = `${data.currentConditions.temp}˚C`;
@@ -281,7 +283,7 @@ function home() {
 
   function loadWeather() {
     let city = localStorage.getItem("last searched city");
-    if (city == null) {
+    if (city === null) {
       let value = createSearch(currentCity, apiKey);
       getWeatherData(value);
     } else {

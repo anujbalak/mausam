@@ -156,7 +156,6 @@ nav a:focus {
 
 div.weather-container > div {
   display: flex;
-  gap: 30px;
 }
 
 .city-name-container,
@@ -164,13 +163,15 @@ div.weather-container > div {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
+  flex-wrap: wrap;
+  font-size: max(1em, 1.8em);
   font-weight: 600;
+  margin: 0 8px;
   color: #493936;
 }
 
 .temprature {
-  font-size: 3rem;
+  font-size: 2em;
 }
 
 div.weather-container div + div {
@@ -197,6 +198,7 @@ div.weather-container div + div > div {
 .quote-container {
   display: grid;
   gap: 10px;
+  width: 85%;
 }
 
 .quote-output {
@@ -210,6 +212,7 @@ div.weather-container div + div > div {
 }
 
 .joke-container {
+  width: 85%;
   display: none;
   font-size: 1.2rem;
   gap: 20px;
